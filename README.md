@@ -1,3 +1,9 @@
+## Note: This is a forked repository created for a coding exercise.
+
+I created the bowling score calculator in JavaScript, HTML, and CSS. To use my version, download the repository and open _index.htm_ in your favorite web browser. Then input text (with valid scoring characters) and hit the button. Your score will be displayed below! - Jesse
+
+
+
 # Design and Development Challenge – Bowling Score
 
 ## Requirement
@@ -26,5 +32,3 @@ Use the test cases from the table below to validate the scoring logic of your pr
 | 9-9-9-9-9-9-9-9-9-9-  | 9 + 9 + 9 + 9 + 9 + 9 + 9 + 9 + 9 + 9                                                                                           | 90          |
 | 5/5/5/5/5/5/5/5/5/5/5 | (10+5) + (10+5) + (10+5) + (10+5) + (10+5) + (10+5) + (10+5) + (10+5) + (10+5) + (10+5)                                         | 150         |
 | X7/9-X-88/-6XXX81     | (10+7+3) + (7+3+9) + 9 + (10+0+8) + 8 + (8+2+0) + 6 + (10+10+10) + (10+10+8) + (10+8+1)                                         | 167         |
-
-

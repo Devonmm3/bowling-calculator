@@ -1,0 +1,95 @@
+body {
+   background: #eee;
+   font-size: 20px;
+}
+
+.title, .subtitle {
+   color: #000;
+}
+
+.title {
+   text-transform: uppercase;
+   font-family: 'Anton', sans-serif;
+}
+
+.icon {
+   position: relative;
+   bottom: 3px;
+}
+
+.subtitle, #game-input, #generator, #score-display {
+   font-family: 'Roboto Condensed', sans-serif;
+}
+
+.subtitle {
+   display: block;
+   padding: 0 0 15px;
+}
+
+.gen-cell {
+   display: block;
+   width: 90%;
+   max-width: 680px;
+   margin: 0 auto;
+}
+
+#game-input, #generator {
+   display: inline-block;
+   margin: 1em auto .5em;
+}
+
+#game-input {
+   width: 100%;
+   transition: .3s all;
+   border: 1px solid #999;
+   font-size: 2em;
+}
+
+#game-input:focus, #generator:hover {
+   box-shadow: 0 0 15px indigo;
+   outline: none;
+}
+
+#generator {
+   color: #fff;
+   text-transform: uppercase;
+   font-size: 1.5em;
+   background: indigo;
+   border-radius: 5px;
+   padding: 10px;
+   border: none;
+   transition: .2s all ease-out;
+}
+
+#generator:focus {
+   outline: none;
+}
+
+.shortcut {
+   font-size: .5em;
+   position: relative;
+   bottom: .4em;
+   padding: 0;
+   margin: 0;
+}
+
+#score-display {
+   display: block;
+   font-weight: bold;
+   font-size: 10em;
+   text-align: center;
+}
+
+footer {
+   font-size: .8em;
+   font-family: 'Roboto Condensed', sans-serif;
+   background: #bbb;
+   display: block;
+   width: 100%;
+   margin: 0 auto;
+   padding: 10px;
+   text-align: center;
+   position: fixed;
+   bottom: 0;
+   left: 0;
+}
