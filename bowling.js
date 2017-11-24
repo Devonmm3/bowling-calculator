@@ -8,8 +8,10 @@
 // It then splits them apart to represent each roll
 // and calculates the final score of the game.
 function bowlScore(game) {
+   game = game.toUpperCase();
    // Splits up the string and stores every character as a roll in an array.
    var rolls = game.split('');
+
    console.log('All rolls: ' + rolls);
 
    // Finds out the number of extra rolls awarded after the final frame of the game.
@@ -45,14 +47,18 @@ function bowlScore(game) {
       score += pins[i];
       // Then the bonuses for spares.
       if (rolls[i] === '/') {
-         score += pins[i + 1];
+         score += pins[i+1];
       }
       // Then the bonuses for strikes.
       if (rolls[i] === 'X') {
-         score += pins[i + 1] + pins[i + 2];
+         score += pins[i+1] + pins[i+2];
       }
    }
    // Score is returned for outputting to the page.
    console.log('Final score: ' + score);
-   return score;
+   if (score.toString() === 'NaN') {
+     return 'Invalid game!';
+   } else {
+     return score;
+   }
 }

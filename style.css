@@ -3,6 +3,10 @@ body {
    font-size: 20px;
 }
 
+.red-bg {
+  background-color: #f88;
+}
+
 .title, .subtitle {
    color: #000;
 }
@@ -10,6 +14,7 @@ body {
 .title {
    text-transform: uppercase;
    font-family: 'Anton', sans-serif;
+   margin-bottom: 5px;
 }
 
 .icon {
@@ -23,7 +28,7 @@ body {
 
 .subtitle {
    display: block;
-   padding: 0 0 15px;
+   padding: 0 0 .5em;
 }
 
 .gen-cell {
@@ -33,20 +38,24 @@ body {
    margin: 0 auto;
 }
 
-#game-input, #generator {
-   display: inline-block;
-   margin: 1em auto .5em;
+#game-input, #legend {
+  margin: .5em auto 18px;
 }
 
 #game-input {
    width: 100%;
+   text-transform: uppercase;
+   font-weight: bold;
+   border-radius: 7px;
    transition: .3s all;
    border: 1px solid #999;
+   padding: 7px 12px;
    font-size: 2em;
+   transition: .2s all;
 }
 
 #game-input:focus, #generator:hover {
-   box-shadow: 0 0 15px indigo;
+   box-shadow: 0 0 10px 2px indigo;
    outline: none;
 }
 
@@ -58,11 +67,30 @@ body {
    border-radius: 5px;
    padding: 10px;
    border: none;
-   transition: .2s all ease-out;
+   margin: 0 0 .5em;
+   transition: .2s box-shadow ease-in-out;
+}
+
+#generator:hover {
+  cursor: pointer;
 }
 
 #generator:focus {
    outline: none;
+}
+
+#legend {
+  font-family: 'Courier', 'Consolas', 'Courier New', monospace;
+  font-weight: bold;
+  margin: 0;
+}
+
+.key {
+  display: inline-block;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(0,0,0,0.3);
 }
 
 .shortcut {
@@ -76,7 +104,9 @@ body {
 #score-display {
    display: block;
    font-weight: bold;
-   font-size: 10em;
+   font-size: 4em;
+   line-height: 1;
+   padding-top: 3vh;
    text-align: center;
 }
 

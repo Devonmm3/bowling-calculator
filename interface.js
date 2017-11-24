@@ -5,11 +5,11 @@
 
 var genBtn = document.getElementById('generator');
 var scoreDisplay = document.getElementById('score-display');
+var gameInput = document.getElementById('game-input');
 
 // This calls the bowlScore function from bowling.js and displays it within the text span on the HTML page.
 function generate() {
-   var gameInput = document.getElementById('game-input').value;
-   var score = bowlScore(gameInput);
+   var score = bowlScore(gameInput.value);
    scoreDisplay.textContent = score;
 }
 
@@ -22,3 +22,16 @@ document.addEventListener('keydown', function(e) {
       generate();
    }
 });
+
+
+gameInput.addEventListener('keydown', function(e) {
+   if (!e.key.match(
+     /[0-9]|x|X|\/|-|Enter|Backspace|Delete|Control|ArrowUp|ArrowDown|ArrowLeft|ArrowRight|Ctrl|Home|End|Shift|Alt|CapsLock/
+   )) {
+     e.preventDefault();
+     gameInput.className += ' red-bg';
+     setTimeout(function() {
+       gameInput.classList.remove('red-bg');
+     }, 200);
+   }
+}); // gameInput.eListen
